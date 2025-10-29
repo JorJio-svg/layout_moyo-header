@@ -1,6 +1,5 @@
 :root {
   --blue: #00acdc;
-  --text: #000;
 }
 
 body {
@@ -24,41 +23,54 @@ body {
 }
 
 .nav {
-  height: 60px;
   margin-right: 50px;
 }
 
-.nav_link {
-  margin: 0 10px;
-  text-decoration: none;
-  cursor: pointer;
-  color: var(--text);
+.nav__list {
+  margin: 0;
+  padding: 0;
 }
 
-.nav_item {
-  display: inline-flex;
+ul {
+  font-size: 0;
+}
+
+.nav__link {
   font-size: 12px;
-  line-height: normal;
-  list-style: none;
+  line-height: 60px;
+  text-decoration: none;
   text-transform: uppercase;
+
+  color: black;
 }
 
-.nav_link.is-active {
+.nav__item {
+  margin-left: 20px;
+  display: inline-flex;
+  list-style: none;
+}
+
+.is-active {
   position: relative;
   color: var(--blue);
 }
 
-.nav_link.is-active::after {
+.is-active::after {
   content: '';
   position: absolute;
   left: 0;
   right: 0;
-  bottom: -17px;
+  bottom: 0;
   height: 4px;
   border-radius: 8px;
   background-color: var(--blue);
 }
 
-a[data-qa='hover'] {
+.nav__link:hover {
   color: var(--blue);
 }
+
+.nav__item:first-child {
+  margin-left: 0;
+}
+
