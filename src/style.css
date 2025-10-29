@@ -1,3 +1,64 @@
+:root {
+  --blue: #00acdc;
+  --text: #000;
+}
+
 body {
+  font-family: Roboto, sans-serif;
+  box-sizing: border-box;
   margin: 0;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffff;
+}
+
+.logo {
+  margin-left: 50px;
+  max-width: 100%;
+  height: auto;
+  cursor: pointer;
+}
+
+.nav {
+  height: 60px;
+  margin-right: 50px;
+}
+
+.nav_link {
+  margin: 0 10px;
+  text-decoration: none;
+  cursor: pointer;
+  color: var(--text);
+}
+
+.nav_item {
+  display: inline-flex;
+  font-size: 12px;
+  line-height: normal;
+  list-style: none;
+  text-transform: uppercase;
+}
+
+.nav_link.is-active {
+  position: relative;
+  color: var(--blue);
+}
+
+.nav_link.is-active::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -17px;
+  height: 4px;
+  border-radius: 8px;
+  background-color: var(--blue);
+}
+
+a[data-qa='hover'] {
+  color: var(--blue);
 }
