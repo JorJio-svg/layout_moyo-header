@@ -16,10 +16,10 @@ body {
 }
 
 .logo {
+  display: block;
   margin-left: 50px;
   max-width: 100%;
   height: auto;
-  cursor: pointer;
 }
 
 .nav {
@@ -29,10 +29,7 @@ body {
 .nav__list {
   margin: 0;
   padding: 0;
-}
-
-ul {
-  font-size: 0;
+  display: flex;
 }
 
 .nav__link {
@@ -73,4 +70,3 @@ ul {
 .nav__item:first-child {
   margin-left: 0;
 }
-
